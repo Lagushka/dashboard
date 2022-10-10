@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MainStatisticsCard from './components/MainStatisticsCard';
+import './style.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <div className="dashboard">
+          <div className="dashboard__main-statistics main-statistics">
+            <MainStatisticsCard color="violet" name="Кол-во зарегистрированных пользователей:" count="4040" />
+            <MainStatisticsCard color="yellow" name="Кол-во пользователей на сайте:" count="2050" />
+            <MainStatisticsCard color="green" name="Кол-во пользователей в приложении:" count="1040" />
+            <MainStatisticsCard color="violet" name="Кол-во регистраций на сайте:" count="3040" />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
